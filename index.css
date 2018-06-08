@@ -1,0 +1,269 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* FONT */
+
+body,
+input,
+textarea,
+pre,
+code {
+    font-family: Microsoft YaHei, sans-serif;
+}
+
+body,
+input,
+textarea {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #000;
+    word-wrap: break-word;
+}
+
+/* GENERAL */
+
+html {
+    overflow-y: hidden;
+    background-image: url('bg.png');
+}
+
+input,
+textarea,
+#rrr,
+#nav {
+    border: 1px solid black;
+    border-radius: 1px;
+    resize: none;
+    background: #fff;
+    padding: 10px;
+    outline: none;
+    box-shadow: inset 0px 1px 1px rgba(65, 55, 45, 0.1);
+}
+
+input::-moz-focus-inner {
+    border: 0
+}
+
+a,
+a:visited {
+    color: #000;
+    cursor: pointer;
+    outline: none;
+}
+
+a:hover,
+.current,
+.active {
+    color: #b00 !important;
+    text-shadow: 0 0 1px rgba(255, 0, 0, 0.45) !important;
+}
+
+/* ITEM */
+
+#wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    padding: 6px;
+}
+
+#nav_wrap,
+#left_wrap,
+#right_wrap {
+    padding-bottom: 20px;
+    height: 100%;
+    float: left;
+}
+
+#nav_wrap {
+    width: 10%;
+    padding-right: 3px;
+}
+
+#left_wrap {
+    width: 50%;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#right_wrap {
+    width: 40%;
+    padding-left: 3px;
+}
+
+#foot_wrap {
+    height: 20px;
+    position: relative;
+    top: -16px;
+}
+
+#lll {
+    font-size: 13px;
+    background: none;
+}
+
+#lll,
+#rrr,
+#nav {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-y: scroll;
+}
+
+#rrr,
+#nav {
+    background: none;
+    padding-top: 5px;
+}
+
+#rrr div {
+    margin-top: 2px;
+}
+
+#rrr div:first-child {
+    margin-top: 0px;
+}
+
+/* use hidden border to increase hover size */
+
+#rrr .bullet,
+#nav .bullet {
+    display: inline-block;
+    position: absolute;
+    top: -5px;
+    left: -9px;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    border: 10px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    background-color: #222;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#rrr .bullet:hover,
+#nav .bullet:hover {
+    background-color: #f00;
+}
+
+#rrr .node p {
+    cursor: text;
+}
+
+#rrr .desc {
+    margin-left: 14px;
+}
+
+#rrr .title,
+#nav .title {
+    margin-left: 14px;
+    display: inline;
+}
+
+#nav .class:hover {
+    color: #eee;
+    border-radius: 3px;
+    padding: 1px 3px;
+    background-color: #050;
+    cursor: pointer;
+}
+
+#rrr .tag {
+    color: #eee;
+    background-color: #050;
+    border-radius: 3px;
+    margin-left: 3px;
+    margin-right: 2px;
+    padding: 0 3px;
+}
+
+#rrr .tag:hover {
+    background-color: #f50;
+    cursor: pointer;
+}
+
+#rrr .class,
+#nav .class {
+    font-weight: 900;
+}
+
+#rrr .urgent {
+    color: #00c;
+    font-weight: bold
+}
+
+#rrr .urgent a {
+    color: #00c !important;
+}
+
+#rrr .done {
+    text-decoration: line-through
+}
+
+#rrr .line {
+    position: absolute;
+    top: 5px;
+    bottom: -12px;
+    width: 5px;
+    border-right: 1px solid #aaa;
+}
+
+#rrr .subitem {
+    padding: 0px 2px;
+    margin: 0 3px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-color: #ded;
+}
+
+/* HACK */
+
+::selection {
+    color: #000;
+    background: #bbb;
+}
+
+::-moz-selection {
+    color: #000;
+    background: #bbb;
+}
+
+@media only screen and (max-device-width:480px) {
+    html {
+        -webkit-text-size-adjust: none !important
+    }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both
+}
