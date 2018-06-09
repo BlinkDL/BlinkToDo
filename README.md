@@ -1,6 +1,8 @@
 # BlinkToDo
 如果你的ToDo有一百项以上，试试这个基于txt的极简事项管理工具。
 
+立即尝试，请点击：https://blinkdl.github.io/BlinkToDo/
+
 效果如图：
 
 ![](example_0.png)
